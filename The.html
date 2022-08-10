@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    
+    
+    <style>
+        #D1,#D2,#D3,#D4,#D5
+        {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            background: #FF9933;
+            color: blanchedalmond;
+            font-size: large;
+            font-weight: bold;
+        }
+        #D6
+        {
+            width: 500px;
+            height: 150px;
+            background: red;
+            border: 1px solid black;
+            
+        }
+        .km{
+            background-color: orange;
+            height: 50px;
+        }
+        .se{
+            background-color: #fff;
+            height: 50px;
+        }
+        .hg{
+            background-color: rgb(34, 224, 16);
+            height: 50px;
+        }
+        img{
+            height: 50px;
+            border: none;
+            
+        }
+
+    </style>
+
+    <script >
+        $(document).ready(function(){
+            $("#D1").draggable();
+
+            $("#D2 span").draggable({
+               containment: "#D2"
+
+            });
+            $("#D3 span").draggable({
+                axis: "x"
+                
+            });
+            $("#D4 span").draggable({
+                axis: "y"
+            });
+
+            $("#D6 span").draggable({
+                distance: 100
+            
+            });
+
+            $("#D5 span").draggable({
+                delay: 3000
+
+            });
+
+        })
+
+    </script>
+</head>
+<body>
+    <div id="D1">
+    <p>Good morning</p>
+</div>
+<hr/>
+
+<div id="D2">
+    <span>ONLY MOVE</span><br/><br/>
+</div>
+<hr/>
+
+<div id="D3">
+    <span>ONE MOVE</span><br><br>
+</div>
+<hr/>
+
+<div id="D4">
+    <span>HTML</span><br><br>
+</div>
+<hr/>
+
+<div id="D5">
+    <span>CSS</span><br><br>
+</div>
+<hr/>
+
+<div id="D6">
+    
+    <div class="km"></div>
+    <div class="se"><center><img src="https://th.bing.com/th/id/OIP.LY2VZ56dvP7pTqBZYKbwygAAAA?w=192&h=193&c=7&r=0&o=5&pid=1.7"></center></div>
+    
+
+    <div class="hg"></div>
+</div>
+<hr/>
+</body>
+</html>
